@@ -17,6 +17,8 @@ namespace DesafioProjetoHospedagem.Models
         {
             if (hospedes.Count > Suite.Capacidade) {
                 throw new Exception("A quantidade de hóspedes não pode ser maior que a capacidade da suíte");
+            } else if (hospedes.Count < 1){
+                throw new Exception("A quantidade de hóspedes não pode ser menor do que 1");
             } else {
                 Hospedes = hospedes;
             }
